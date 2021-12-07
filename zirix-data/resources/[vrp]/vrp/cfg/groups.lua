@@ -1,9 +1,43 @@
 local cfg = {}
 
 cfg.groups = {
-
+	["mindmaster"] = {
+		_config = {
+			title = "MindMaster"
+		},
+		"mindmaster.permissao",
+		"administrador.permissao",
+		"weather.permissao",
+		"time.permissao",
+		"ticket.permissao"
+	},
+	["administrador"] = {
+		_config = {
+			title = "Administrador(a)"
+		},
+		"administrador.permissao",
+		"admin.permissao",
+		"weather.permissao",
+		"time.permissao",
+		"ticket.permissao"
+	},
+	["moderador"] = {
+		_config = {
+			title = "Moderador(a)"
+		},
+		"moderador.permissao",
+		"ticket.permissao"
+	},
+	["suporte"] = {
+		_config = {
+			title = "Suporte"
+		},
+		"suporte.permissao",
+		"ticket.permissao"
+	},
+	-----------------------------------------------------------------------------
 	--[	Departamento de Justiça ]------------------------------------------------
-	
+	-----------------------------------------------------------------------------
 	["juiz"] = {
 		_config = {
 			title = "Juiz(a)",
@@ -35,34 +69,26 @@ cfg.groups = {
 	["advogado"] = {
 		_config = {
 			title = "Advogado(a)",
-			gtype = "adv"
+			gtype = "job"
 		},
 		"advogado.permissao"
 	},
-	
+	-----------------------------------------------------------------------------
 	--[	Departamento de Policia ]------------------------------------------------
-	
-	["policia"] = {
+	-----------------------------------------------------------------------------
+	["dpla"] = {
 		_config = {
-			title = "POLICIA",
+			title = "DPLA",
 			gtype = "job"
 		},
-		"policia.permissao",
+		"dpla.permissao",
 	},
-	["paisana-policia"] = {
+	["paisana-dpla"] = {
 		_config = {
-			title = "A PAISANA POLICIA",
+			title = "Paisana DPCP",
 			gtype = "job"
 		},
-		"paisana-policia.permissao",
-	},
-
-	["policia-ptr"] = {
-		_config = {
-			title = "EM PATRULHA",
-			gtype = "ptr"
-		},
-		"policia-ptr.permissao",
+		"paisana-dpla.permissao",
 	},
 
 	["chefe-policia"] = {
@@ -70,87 +96,98 @@ cfg.groups = {
 			title = "Chefe de Polícia",
 			gtype = "hie"
 		},
-		"chefe-policia.permissao"
+		"chefe-policia.permissao",
+		"dpla.permissao"
 	},
 	["sub-chefe-policia"] = {
 		_config = {
 			title = "Sub Chefe de Polícia",
 			gtype = "hie"
 		},
-		"sub-chefe-policia.permissao"
+		"sub-chefe-policia.permissao",
+		"dpla.permissao"
+		
 	},
 	["inspetor"] = {
 		_config = {
 			title = "Inspetor de Polícia",
 			gtype = "hie"
 		},
-		"inspetor.permissao"
+		"inspetor.permissao",
+		"dpla.permissao"
 	},
 	["capitao"] = {
 		_config = {
 			title = "Capitão de Polícia",
 			gtype = "hie"
 		},
-		"capitao.permissao"
+		"capitao.permissao",
+		"dpla.permissao"
 	},
 	["tenente"] = {
 		_config = {
 			title = "Tenente de Polícia",
 			gtype = "hie"
 		},
-		"tenente.permissao"
+		"tenente.permissao",
+		"dpla.permissao"
 	},
 	["sub-tenente"] = {
 		_config = {
 			title = "Sub Tenente de Polícia",
 			gtype = "hie"
 		},
-		"sub-tenente.permissao"
+		"sub-tenente.permissao",
+		"dpla.permissao"
 	},
-	["primeiro-sargento"] = {
+	["um-sargento"] = {
 		_config = {
 			title = "1º Sargento de Polícia",
 			gtype = "hie"
 		},
-		"primeiro-sargento.permissao"
+		"um-sargento.permissao",
+		"dpla.permissao"
 	},
-	["segundo-sargento"] = {
+	["dois-sargento"] = {
 		_config = {
 			title = "2º Sargento de Polícia",
 			gtype = "hie"
 		},
-		"segundo-sargento.permissao"
+		"dois-sargento.permissao",
+		"dpla.permissao"
 	},
 	["agente-policia"] = {
 		_config = {
 			title = "Agente de Polícia",
 			gtype = "hie"
 		},
-		"agente-policia.permissao"
+		"agente-policia.permissao",
+		"dpla.permissao"
 	},
 	["recruta-policia"] = {
 		_config = {
 			title = "Recruta de Polícia",
 			gtype = "hie"
 		},
-		"recruta-policia.permissao"
+		"recruta-policia.permissao",
+		"dpla.permissao"
 	},
-	
+	-----------------------------------------------------------------------------
 	--[	Departamento Médico ]----------------------------------------------------
-	
-	["ems"] = {
+	-----------------------------------------------------------------------------
+	["dmla"] = {
 		_config = {
-			title = "EMS",
+			title = "DMLA",
 			gtype = "job"
 		},
-		"ems.permissao",
+		"dmla.permissao",
 	}, 
-	["paisana-ems"] = {
+	["paisana-dmla"] = {
 		_config = {
-			title = "EMS DE FOLGA",
+			title = "Paisana DMLA",
 			gtype = "job"
 		},
-		"paisana-ems.permissao"
+		"paisana-dmla.permissao"
 	},
 	
 	["diretor-geral"] = {
@@ -158,74 +195,84 @@ cfg.groups = {
 			title = "Diretor Geral",
 			gtype = "hie"
 		},
-		"diretor-geral.permissao"
+		"diretor-geral.permissao",
+		"dmla.permissao"
 	},
 	["diretor-auxiliar"] = {
 		_config = {
 			title = "Diretor Auxiliar",
 			gtype = "hie"
 		},
-		"diretor-auxiliar.permissao"
+		"diretor-auxiliar.permissao",
+		"dmla.permissao"
 	},
 	["medico-chefe"] = {
 		_config = {
 			title = "Médico Chefe",
 			gtype = "hie"
 		},
-		"medico-chefe.permissao"
+		"medico-chefe.permissao",
+		"dmla.permissao"
 	},
 	["medico-cirurgiao"] = {
 		_config = {
 			title = "Médico Cirurgião",
 			gtype = "hie"
 		},
-		"medico-cirurgiao.permissao"
+		"medico-cirurgiao.permissao",
+		"dmla.permissao"
 	},
 	["medico-aulixiar"] = {
 		_config = {
 			title = "Médico Auxiliar",
 			gtype = "hie"
 		},
-		"medico-aulixiar.permissao"
+		"medico-aulixiar.permissao",
+		"dmla.permissao"
 	},
 	["medico"] = {
 		_config = {
 			title = "Médico",
 			gtype = "hie"
 		},
-		"medico.permissao"
+		"medico.permissao",
+		"dmla.permissao"
 	},
 	["paramedico"] = {
 		_config = {
 			title = "Paramédico",
 			gtype = "hie"
 		},
-		"paramedico.permissao"
+		"paramedico.permissao",
+		"dmla.permissao"
 	},
 	["enfermeiro"] = {
 		_config = {
 			title = "Enfermeiro",
 			gtype = "hie"
 		},
-		"enfermeiro.permissao"
+		"enfermeiro.permissao",
+		"dmla.permissao"
 	},
 	["socorrista"] = {
 		_config = {
 			title = "Socorrista",
 			gtype = "hie"
 		},
-		"socorrista.permissao"
+		"socorrista.permissao",
+		"dmla.permissao"
 	},
 	["estagiario"] = {
 		_config = {
 			title = "Estágiario",
 			gtype = "hie"
 		},
-		"estagiario.permissao"
+		"estagiario.permissao",
+		"dmla.permissao"
 	},
-	
+	-----------------------------------------------------------------------------
 	--[	Taxista ]----------------------------------------------------------------
-	
+	-----------------------------------------------------------------------------
 	["taxista"] = {
 		_config = {
 			title = "Taxista",
@@ -240,297 +287,309 @@ cfg.groups = {
 		},
 		"paisana-taxista.permissao"
 	},
-	
-	--[	Mecânico ]---------------------------------------------------------------
-	
+	-----------------------------------------------------------------------------
+	--[	Mecânico e Bennys ]------------------------------------------------------
+	-----------------------------------------------------------------------------
 	["mecanico"] = {
 		_config = {
 			title = "Mêcanico",
 			gtype = "job"
 		},
-		"mecanico.permissao"
+		"mecanico.permissao",
+		"chamadomec.permissao"
 	},
 	["paisana-mecanico"] = {
 		_config = {
-			title = "Mecânico de folga",
+			title = "LSCostums de folga",
 			gtype = "job"
 		},
 		"paisana-mecanico.permissao"
 	},
-	
-	--[	Bennys ]-----------------------------------------------------------------
-
 	["bennys"] = {
 		_config = {
-			title = "Membro da Bennys",
+			title = "Mecânico de Bennys",
 			gtype = "job"
 		},
-		"bennys.permissao"
+		"bennys.permissao",
+		"chamadomec.permissao"
 	},
-	["lider-bennys"] = {
+	["paisana-bennys"] = {
 		_config = {
-			title = "Líder da Bennys",
-			gtype = "hie"
+			title = "Bennys de folga",
+			gtype = "job"
 		},
-		"lider-bennys.permissao"
+		"paisana-bennys.permissao"
+	},
+	["chefe-bennys"] = {
+		_config = {
+			title = "Chefe de Bennys",
+			gtype = "job"
+		},
+		"bennys.permissao",
+		"chefe-bennys.permissao",
+		"chamadomec.permissao"
+	},
+	["paisana-chefe-bennys"] = {
+		_config = {
+			title = "Folga Chef Bennys",
+			gtype = "job"
+		},
+		"paisana-chef-bennys.permissao"
 	},
 	
-	--[	Organização de produção e venda de drogas ][ Ballas ]--------------------
-	
+	-----------------------------------------------------------------------------
+	--[	Lossantos ]------------------------------------------------------
+	-----------------------------------------------------------------------------	
+	["lossantos"] = {
+		_config = {
+			title = "Mecânico de LosSantos",
+			gtype = "job"
+		},
+		"lossantos.permissao",
+		"chamadomec.permissao"
+	},
+	["paisana-lossantos"] = {
+		_config = {
+			title = "LosSantos de folga",
+			gtype = "job"
+		},
+		"paisana-lossantos.permissao"
+	},
+	["chefe-lossantos"] = {
+		_config = {
+			title = "Chefe de LosSantos",
+			gtype = "job"
+		},
+		"lossantos.permissao",
+		"chefe-lossantos.permissao",
+		"chamadomec.permissao"
+	},
+	["paisana-chefe-lossantos"] = {
+		_config = {
+			title = "Folga Chef LosSantos",
+			gtype = "job"
+		},
+		"paisana-chef-lossantos.permissao"
+	},
+	-----------------------------------------------------------------------------
+	--[	Organização de produção e venda de drogas ]------------------------------ COCA
+	-----------------------------------------------------------------------------
 	["ballas"] = {
 		_config = {
 			title = "Membro dos Ballas",
-			gtype = "job"
+			gtype = "job",
 		},
 		"ballas.permissao"
 	},
 	["lider-ballas"] = {
 		_config = {
 			title = "Líder dos Ballas",
-			gtype = "hie"
+			gtype = "hie",
 		},
-		"lider-ballas.permissao"
+		"lider-ballas.permissao",
+		"ballas.permissao"
 	},
-	
-	--[	Organização de produção e venda de drogas ][ Grove ]---------------------
-	
+		-----------------------------------------------------------------------------
+	--[	Organização de produção de maconha ]------------------------------ canabis
+	-----------------------------------------------------------------------------
+	["vagos"] = {
+		_config = {
+			title = "Membro dos Vagos",
+			gtype = "job",
+		},
+		"vagos.permissao"
+	},
+	["lider-vagos"] = {
+		_config = {
+			title = "Líder dos Vagos",
+			gtype = "hie",
+		},
+		"lider-vagos.permissao",
+		"vagos.permissao"
+	},
+	-----------------------------------------------------------------------------
+	--[	Organização de produção e venda de drogas ]------------------------------Metanfetamina
+	-----------------------------------------------------------------------------
 	["grove"] = {
 		_config = {
 			title = "Membro da Grove",
-			gtype = "job"
+			gtype = "job",
 		},
 		"grove.permissao"
 	},
 	["lider-grove"] = {
 		_config = {
 			title = "Líder da Grove",
-			gtype = "hie"
+			gtype = "hie",
 		},
-		"lider-grove.permissao"
+		"lider-grove.permissao",
+		"grove.permissao"
 	},
-	
-	--[	Organização de produção e venda de drogas ][ Families ]------------------
-	
-	["families"] = {
-		_config = {
-			title = "Membro da Families",
-			gtype = "job"
-		},
-		"families.permissao"
-	},
-	["lider-families"] = {
-		_config = {
-			title = "Líder da Families",
-			gtype = "hie"
-		},
-		"lider-families.permissao"
-	},
-	
-	--[	Organização de produção e vendas de armas ][ Medellin ]------------------
-	
+	-----------------------------------------------------------------------------
+	--[	Organização de produção e vendas de armas ]------------------------------fabrica armas
+	-----------------------------------------------------------------------------
 	["medellin"] = {
 		_config = {
 			title = "Membro Medellín",
-			gtype = "job"
+			gtype = "job",
 		},
 		"medellin.permissao"
 	},
 	["lider-medellin"] = {
 		_config = {
 			title = "Líder Medellín",
-			gtype = "hie"
+			gtype = "hie",
 		},
-		"lider-medellin.permissao"
+		"lider-medellin.permissao",
+		"medellin.permissao"
 	},
-	
-	--[	Organização de produção e vendas de armas ][ Motoclub ]------------------
-	
+	-----------------------------------------------------------------------------
+	--[	Organização de produção e vendas de armas ]------------------------------ fabrica balas
+	-----------------------------------------------------------------------------
 	["motoclub"] = {
 		_config = {
 			title = "Membro Motoclub",
-			gtype = "job"
+			gtype = "job",
 		},
-		"oc-guns02.permissao"
+		"oc-guns02.permissao",
+		"motoclub.permissao"
 	},
 	["lider-motoclub"] = {
 		_config = {
 			title = "Presidente Motoclub",
-			gtype = "hie"
+			gtype = "hie",
 		},
-		"lider-motoclub.permissao"
+		"lider-motoclub.permissao",
+		"motoclub.permissao"
 	},
-	
-	--[	Organização de lavagem de dinheiro ][ Bratva ]---------------------------
-	
+	-----------------------------------------------------------------------------
+	--[	Organização de lavagem de dinheiro ]-------------------------------------
+	-----------------------------------------------------------------------------
 	["bratva"] = {
 		_config = {
 			title = "Membro Bratva",
-			gtype = "job"
+			gtype = "job",
 		},
 		"bratva.permissao"
 	},
 	["lider-bratva"] = {
 		_config = {
-			title = "Chefão Bratva",
-			gtype = "hie"
+			title = "Chefe Bratva",
+			gtype = "hie",
 		},
-		"lider-bratva.permissao"
+		"lider-bratva.permissao",
+		"bratva.permissao"
 	},
-
-	--[	Organização de lavagem de dinheiro ][ Ndrangheta ]-----------------------
-	
-	["ndrangheta"] = {
+	-----------------------------------------------------------------------------
+	--[	Organização de lavagem de dinheiro ]-------------------------------------
+	-----------------------------------------------------------------------------
+	["yakuza"] = {
 		_config = {
-			title = "Membro Ndrangheta",
-			gtype = "job"
+			title = "Membro Yakuza",
+			gtype = "job",
 		},
-		"ndrangheta.permissao"
+		"yakuza.permissao"
 	},
-	["lider-ndrangheta"] = {
+	["diretor-yakuza"] = {
 		_config = {
-			title = "Líder Ndrangheta",
-			gtype = "hie"
+			title = "Chefe Yakuza",
+			gtype = "hie",
 		},
-		"lider-ndrangheta.permissao"
+		"diretor-yakuza.permissao",
+		"yakuza.permissao"
 	},
-
-	--[	Organização de Produção de coletes e acessórios ][ NynaX ]---------------
-	
-	["nynax"] = {
+	-----------------------------------------------------------------------------
+	--[	unicorn vanilla ]-------------------------------------
+	-----------------------------------------------------------------------------
+	["unicorn"] = {
 		_config = {
-			title = "Membro NynaX",
-			gtype = "job"
+			title = "Membro unicorn",
+			gtype = "job",
 		},
-		"nynax.permissao"
+		"unicorn.permissao"
 	},
-	["lider-nynax"] = {
+	["lider-unicorn"] = {
 		_config = {
-			title = "Líder NynaX",
-			gtype = "hie"
+			title = "Chefão unicorn",
+			gtype = "hie",
 		},
-		"lider-nynax.permissao"
+		"lider-unicorn.permissao",
+		"unicorn.permissao"
+	},	
+-----------------------------------------------------------------------------
+	["mafia"] = {
+		_config = {
+			title = "Membro mafia",
+			gtype = "job",
+		},
+		"mafia.permissao"
 	},
-
-	--[	Organização de Produção de coletes e acessórios ][ Semantic ]------------
-	
-	["semantic"] = {
+	["lider-mafia"] = {
 		_config = {
-			title = "Membro Semantic",
-			gtype = "job"
+			title = "Chefão mafia",
+			gtype = "hie",
 		},
-		"semantic.permissao"
+		"lider-mafia.permissao",
+		"mafia.permissao"
 	},
-	["lider-semantic"] = {
+	-----------------------------------------------------------------------------
+	--[	triad fabrico de mochilas lockpick capuz algemas ]-------------------------------------
+	-----------------------------------------------------------------------------
+	["triad"] = {
 		_config = {
-			title = "Líder Semantic",
-			gtype = "hie"
+			title = "Membro triad",
+			gtype = "job",
 		},
-		"lider-semantic.permissao"
+		"triad.permissao"
 	},
-
-	--[	Staff ]------------------------------------------------------------------
-
-	["manager"] = {
+	["lider-triad"] = {
 		_config = {
-			title = "Manager",
-			gtype = "staff"
+			title = "Chefão triad",
+			gtype = "hie",
 		},
-		"manager.permissao"
+		"lider-triad.permissao",
+		"triad.permissao"
+	},	
+	["vendedor"] = {
+		_config = {
+			title = "Vendedor Conce",
+			gtype = "hie",
+		},
+		"vendedor.permissao",
+		"conce.permissao"
 	},
-	["off-manager"] = {
+	["bronze"] = {
 		_config = {
-			title = "Manager",
-			gtype = "staff"
+			title = "Vip Bronze",
+			gtype = "vip",
 		},
-		"off-manager.permissao"
+		"bronze.permissao"
 	},
-
-	["administrador"] = {
+	["prata"] = {
 		_config = {
-			title = "Administrador(a)",
-			gtype = "staff"
+			title = "Vip Prata",
+			gtype = "vip",
 		},
-		"administrador.permissao"
+		"prata.permissao"
 	},
-	["off-administrador"] = {
+	["ouro"] = {
 		_config = {
-			title = "Administrador(a)",
-			gtype = "staff"
+			title = "Vip Ouro",
+			gtype = "vip",
 		},
-		"off-administrador.permissao"
+		"ouro.permissao"
 	},
-
-	["moderador"] = {
+	["platina"] = {
 		_config = {
-			title = "Moderador(a)",
-			gtype = "staff"
+			title = "Vip Platina",
+			gtype = "vip",
 		},
-		"moderador.permissao"
-	},
-	["off-moderador"] = {
-		_config = {
-			title = "Moderador(a)",
-			gtype = "staff"
-		},
-		"off-moderador.permissao"
-	},
-
-	["suporte"] = {
-		_config = {
-			title = "Suporte",
-			gtype = "staff"
-		},
-		"suporte.permissao"
-	},
-	["off-suporte"] = {
-		_config = {
-			title = "Suporte",
-			gtype = "staff"
-		},
-		"off-suporte.permissao"
-	},
-	["aprovador-wl"] = {
-		_config = {
-			title = "Aprovador WL",
-			gtype = "staff"
-		},
-		"aprovador-wl.permissao"
-	},
-
-	--[	Pass ]-------------------------------------------------------------------
-
-	["ultimate"] = {
-		_config = {
-			title = "Ultimate Pass",
-			gtype = "pass"
-		},
-		"ultimate.permissao"
-	},
-	["platinum"] = {
-		_config = {
-			title = "Platinum Pass",
-			gtype = "pass"
-		},
-		"platinum.permissao"
-	},
-	["gold"] = {
-		_config = {
-			title = "Gold Pass",
-			gtype = "pass"
-		},
-		"gold.permissao"
-	},
-	["standard"] = {
-		_config = {
-			title = "Standard Pass",
-			gtype = "pass"
-		},
-		"standard.permissao"
+		"platina.permissao"
 	}
 }
 
 cfg.users = {
-	[1] = { "manager" }
+	[1] = { "mindmaster" }
 }
 
 cfg.selectors = {}
