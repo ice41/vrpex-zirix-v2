@@ -53,31 +53,31 @@ end
 function tvRP.GetVehicleSeat()
     return GetPedInVehicleSeat(GetVehiclePedIsUsing(PlayerPedId()),-1) == PlayerPedId()
 end
-
+-----------------------------------------------------------------------------------------------------------------------------------------
 --[ VEHLIST ]----------------------------------------------------------------------------------------------------------------------------
-
+-----------------------------------------------------------------------------------------------------------------------------------------
 local vehList = {
-	{ ['name'] = "blista", ['hash'] = -344943009, ['banned'] = false }, -- -- Preço: 22.000,00 | Porta-Malas: 20;
+	{ ['name'] = "blista", ['hash'] = -344943009, ['banned'] = false },
 	{ ['name'] = "brioso", ['hash'] = 1549126457, ['banned'] = false },
-	{ ['name'] = "dilettante", ['hash'] = -1130810103, ['banned'] = false }, -- Preço: 17.000,00 | Porta-Malas: 25;
+	{ ['name'] = "dilettante", ['hash'] = -1130810103, ['banned'] = false },
 	{ ['name'] = "issi2", ['hash'] = -1177863319, ['banned'] = false },
-	{ ['name'] = "panto", ['hash'] = -431692672, ['banned'] = false }, -- Preço: 12.000,00 | Porta-Malas: 10;
-	{ ['name'] = "prairie", ['hash'] = -1450650718, ['banned'] = false }, -- Preço: 27.000,00 | Porta-Malas: 20;
-	{ ['name'] = "rhapsody", ['hash'] = 841808271, ['banned'] = false }, -- Preço: 12.000,00 | Porta-Malas: 10;
+	{ ['name'] = "panto", ['hash'] = -431692672, ['banned'] = false },
+	{ ['name'] = "prairie", ['hash'] = -1450650718, ['banned'] = false },
+	{ ['name'] = "rhapsody", ['hash'] = 841808271, ['banned'] = false },
 	{ ['name'] = "cogcabrio", ['hash'] = 330661258, ['banned'] = false },
-	{ ['name'] = "emperor", ['hash'] = -685276541, ['banned'] = false }, -- Preço: 7.000,00 | Porta-Malas: 30;
+	{ ['name'] = "emperor", ['hash'] = -685276541, ['banned'] = false },
 	{ ['name'] = "emperor2", ['hash'] = -1883002148, ['banned'] = false },
 	{ ['name'] = "phoenix", ['hash'] = -2095439403, ['banned'] = false },
-	{ ['name'] = "premier", ['hash'] = -1883869285, ['banned'] = false }, -- Preço: 37.000,00 | Porta-Malas: 30;
+	{ ['name'] = "premier", ['hash'] = -1883869285, ['banned'] = false },
 	{ ['name'] = "glendale", ['hash'] = 75131841, ['banned'] = false },
-	{ ['name'] = "intruder", ['hash'] = 886934177, ['banned'] = false }, -- Preço: 11.000,00 | Porta-Malas: 30;
+	{ ['name'] = "intruder", ['hash'] = 886934177, ['banned'] = false },
 	{ ['name'] = "exemplar", ['hash'] = -5153954, ['banned'] = false },
 	{ ['name'] = "f620", ['hash'] = -591610296, ['banned'] = false },
 	{ ['name'] = "felon", ['hash'] = -391594584, ['banned'] = false },
 	{ ['name'] = "ingot", ['hash'] = -1289722222, ['banned'] = false },
 	{ ['name'] = "felon2", ['hash'] = -89291282, ['banned'] = false },
 	{ ['name'] = "jackal", ['hash'] = -624529134, ['banned'] = false },
-	{ ['name'] = "oracle", ['hash'] = 1348744438, ['banned'] = false }, -- Preço: 28.000,00 | Porta-Malas: 30;
+	{ ['name'] = "oracle", ['hash'] = 1348744438, ['banned'] = false },
 	{ ['name'] = "oracle2", ['hash'] = -511601230, ['banned'] = false },
 	{ ['name'] = "sentinel", ['hash'] = 1349725314, ['banned'] = false },
 	{ ['name'] = "sentinel2", ['hash'] = 873639469, ['banned'] = false },
@@ -88,7 +88,7 @@ local vehList = {
 	{ ['name'] = "blade", ['hash'] = -1205801634, ['banned'] = false },
 	{ ['name'] = "buccaneer", ['hash'] = -682211828, ['banned'] = false },
 	{ ['name'] = "buccaneer2", ['hash'] = -1013450936, ['banned'] = false },
-	{ ['name'] = "primo", ['hash'] = -1150599089, ['banned'] = false }, -- Preço: 9.500,00 | Porta-Malas: 30;
+	{ ['name'] = "primo", ['hash'] = -1150599089, ['banned'] = false },
 	{ ['name'] = "primo2", ['hash'] = -2040426790, ['banned'] = false },
 	{ ['name'] = "chino", ['hash'] = 349605904, ['banned'] = false },
 	{ ['name'] = "chino2", ['hash'] = -1361687965, ['banned'] = false },
@@ -156,17 +156,17 @@ local vehList = {
 	{ ['name'] = "granger", ['hash'] = -1775728740, ['banned'] = false },
 	{ ['name'] = "gresley", ['hash'] = -1543762099, ['banned'] = false },
 	{ ['name'] = "habanero", ['hash'] = 884422927, ['banned'] = false },
-	{ ['name'] = "seminole", ['hash'] = 1221512915, ['banned'] = false }, -- Preço: 41.000,00 | Porta-Malas: 55;
+	{ ['name'] = "seminole", ['hash'] = 1221512915, ['banned'] = false },
 	{ ['name'] = "serrano", ['hash'] = 1337041428, ['banned'] = false },
 	{ ['name'] = "xls", ['hash'] = 1203490606, ['banned'] = false },
 	{ ['name'] = "xls2", ['hash'] = -432008408, ['banned'] = false },
-	{ ['name'] = "asea", ['hash'] = -1809822327, ['banned'] = false }, -- Preço: 32.000,00 | Porta-Malas: 30;
-	{ ['name'] = "asterope", ['hash'] = -1903012613, ['banned'] = false }, -- Preço: 49.000,00 | Porta-Malas: 35;
+	{ ['name'] = "asea", ['hash'] = -1809822327, ['banned'] = false },
+	{ ['name'] = "asterope", ['hash'] = -1903012613, ['banned'] = false },
 	{ ['name'] = "cog55", ['hash'] = 906642318, ['banned'] = false },
 	{ ['name'] = "cog552", ['hash'] = 704435172, ['banned'] = false },
 	{ ['name'] = "cognoscenti", ['hash'] = -2030171296, ['banned'] = false },
 	{ ['name'] = "cognoscenti2", ['hash'] = -604842630, ['banned'] = false },
-	{ ['name'] = "stanier", ['hash'] = -1477580979, ['banned'] = false }, -- Preço: 18.000,00 | Porta-Malas: 30;
+	{ ['name'] = "stanier", ['hash'] = -1477580979, ['banned'] = false },
 	{ ['name'] = "stratum", ['hash'] = 1723137093, ['banned'] = false },
 	{ ['name'] = "superd", ['hash'] = 1123216662, ['banned'] = false },
 	{ ['name'] = "surge", ['hash'] = -1894894188, ['banned'] = false },
@@ -359,9 +359,9 @@ local vehList = {
 	{ ['name'] = "diablous", ['hash'] = -239841468, ['banned'] = false },
 	{ ['name'] = "diablous2", ['hash'] = 1790834270, ['banned'] = false },
 	{ ['name'] = "double", ['hash'] = -1670998136, ['banned'] = false },
-	{ ['name'] = "enduro", ['hash'] = 1753414259, ['banned'] = false }, -- Preço: 18.000,00 | Porta-Malas: 5;
+	{ ['name'] = "enduro", ['hash'] = 1753414259, ['banned'] = false },
 	{ ['name'] = "esskey", ['hash'] = 2035069708, ['banned'] = false },
-	{ ['name'] = "faggio", ['hash'] = -1842748181, ['banned'] = false }, -- Preço: 5.000,00 | Porta-Malas: 5;
+	{ ['name'] = "faggio", ['hash'] = -1842748181, ['banned'] = false },
 	{ ['name'] = "faggio2", ['hash'] = 55628203, ['banned'] = false },
 	{ ['name'] = "faggio3", ['hash'] = -1289178744, ['banned'] = false },
 	{ ['name'] = "fcr", ['hash'] = 627535535, ['banned'] = false },
@@ -375,7 +375,7 @@ local vehList = {
 	{ ['name'] = "manchez", ['hash'] = -1523428744, ['banned'] = false },
 	{ ['name'] = "nemesis", ['hash'] = -634879114, ['banned'] = false },
 	{ ['name'] = "nightblade", ['hash'] = -1606187161, ['banned'] = false },
-	{ ['name'] = "pcj", ['hash'] = -909201658, ['banned'] = false }, -- Preço: 32.000,00 | Porta-Malas: 5;
+	{ ['name'] = "pcj", ['hash'] = -909201658, ['banned'] = false },
 	{ ['name'] = "ruffian", ['hash'] = -893578776, ['banned'] = false },
 	{ ['name'] = "sanchez", ['hash'] = 788045382, ['banned'] = false },
 	{ ['name'] = "sanchez2", ['hash'] = -1453280962, ['banned'] = false },
@@ -400,8 +400,12 @@ local vehList = {
 	{ ['name'] = "policiabmwr1200", ['hash'] = -1624991916, ['banned'] = true },
 	{ ['name'] = "policiaheli", ['hash'] = -875050963, ['banned'] = true },
 	{ ['name'] = "policiabearcat", ['hash'] = -1748002214, ['banned'] = true },
+	{ ['name'] = "policiaexplorer", ['hash'] = -377693317, ['banned'] = true },
+	{ ['name'] = "policiamustanggt", ['hash'] = 796154746, ['banned'] = true },
+	{ ['name'] = "policiaschaftersid", ['hash'] = 589099944, ['banned'] = true },
+	{ ['name'] = "policiavictoria", ['hash'] = 1611501436, ['banned'] = true },
 
-	{ ['name'] = "ambulance", ['hash'] = 1171614426, ['banned'] = true },
+	{ ['name'] = "medicoambu", ['hash'] = -252251190, ['banned'] = true },
 
 	{ ['name'] = "pbus", ['hash'] = -2007026063, ['banned'] = true },
 	{ ['name'] = "mule4", ['hash'] = 1945374990, ['banned'] = false },
@@ -416,7 +420,6 @@ local vehList = {
 	{ ['name'] = "ratloader2", ['hash'] = -589178377, ['banned'] = false },
 	{ ['name'] = "rubble", ['hash'] = -1705304628, ['banned'] = true },
 	{ ['name'] = "taxi", ['hash'] = -956048545, ['banned'] = true },
-	{ ['name'] = "boxville2", ['hash'] = -233098306, ['banned'] = false },
 	{ ['name'] = "boxville4", ['hash'] = 444171386, ['banned'] = false },
 	{ ['name'] = "trash2", ['hash'] = -1255698084, ['banned'] = false },
 	{ ['name'] = "tiptruck", ['hash'] = 48339065, ['banned'] = false },
@@ -573,46 +576,27 @@ local vehList = {
 	{ ['name'] = "m6x6", ['hash'] = 53299675, ['banned'] = false },
 	{ ['name'] = "m6gt3", ['hash'] = -1677172839, ['banned'] = false },
 	{ ['name'] = "w900", ['hash'] = 730959932, ['banned'] = false },
-	{ ['name'] = "pounder", ['hash'] = 2112052861, ['banned'] = false }
+	{ ['name'] = "pounder", ['hash'] = 2112052861, ['banned'] = false },
+	{ ['name'] = "trans_teslams", ['hash'] = -1891278404, ['banned'] = false }
 }
-
+-----------------------------------------------------------------------------------------------------------------------------------------
 --[ VEHLIST ]----------------------------------------------------------------------------------------------------------------------------
-
-function tvRP.vehListHash()
-	local ped = PlayerPedId()
-	local veh = GetVehiclePedIsUsing(ped)
-
-	if not IsPedInAnyVehicle(ped) then
-		veh = GetPlayersLastVehicle()
-	end
-
-	if IsEntityAVehicle(veh) then
-		for k,v in pairs(vehList) do
-			if v.hash == GetEntityModel(veh) then
-				if v.name then
-					return veh,v.hash,GetVehicleNumberPlateText(veh),v.name
-				end
-			end
-		end
-	end
-end
-
+-----------------------------------------------------------------------------------------------------------------------------------------
 function tvRP.vehList(radius)
 	local ped = PlayerPedId()
 	local veh = GetVehiclePedIsUsing(ped)
-
 	if not IsPedInAnyVehicle(ped) then
 		veh = tvRP.getNearestVehicle(radius)
 	end
-
 	if IsEntityAVehicle(veh) then
+		local lock = GetVehicleDoorLockStatus(veh)
 		local trunk = GetVehicleDoorAngleRatio(v,5)
 		local x,y,z = table.unpack(GetEntityCoords(ped))
 		for k,v in pairs(vehList) do
 			if v.hash == GetEntityModel(veh) then
 				if v.name then
 					local tuning = { GetNumVehicleMods(veh,13),GetNumVehicleMods(veh,12),GetNumVehicleMods(veh,15),GetNumVehicleMods(veh,11),GetNumVehicleMods(veh,16) }
-					return veh,VehToNet(veh),GetVehicleNumberPlateText(veh),v.name,GetVehicleDoorsLockedForPlayer(veh,PlayerId()),v.banned,trunk,GetDisplayNameFromVehicleModel(v.name),GetStreetNameFromHashKey(GetStreetNameAtCoord(x,y,z)),tuning
+					return veh,VehToNet(veh),GetVehicleNumberPlateText(veh),v.name,lock,v.banned,trunk,GetDisplayNameFromVehicleModel(v.name),GetStreetNameFromHashKey(GetStreetNameAtCoord(x,y,z)),tuning
 				end
 			end
 		end
