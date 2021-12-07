@@ -120,3 +120,31 @@ AddEventHandler("vRP:save",function()
 		end
 	end
 end)
+function vRP.tryFullPayment(user_id,amount)
+	if amount >= 0 then
+		local money = vRP.getMoney(user_id)
+		if money >= amount then
+			return vRP.tryPayment(user_id,amount)
+		else
+			if vRP.tryWithdraw(user_id, amount-money) then
+				return vRP.tryPayment(user_id,amount)
+			end
+		end
+	end
+	return false
+end
+
+function vRP.giveMoney(user_id,amount)
+	if amount >= 0 then
+		local money = vRP.getMoney(user_id)
+		--vRP.setMoney(user_id,money+amount)
+		vRP.giveInventoryItem(user_id,dinheiro,amount)
+	end
+end
+
+function vRP.setMoney(user_id,value)
+	local tmp = vRP.getUserTmpTable(user_id)
+	if tmp then
+		tmp.wallet = value
+	end
+end
