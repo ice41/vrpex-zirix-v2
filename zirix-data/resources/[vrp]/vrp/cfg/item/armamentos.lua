@@ -123,6 +123,7 @@ local nomes = {
 	
 	Petrolcan = "Galão de Gasolina",
 	Gadget_parachute = "Paraquedas",
+	Flare = "Sinalizador",
 	Fireextinguisher = "Extintor"
 }
 
